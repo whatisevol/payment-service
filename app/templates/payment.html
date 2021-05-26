@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/form.css') }}">
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+{%block content %}
+<div class="container">
+<form name= "Pay" method="post" action={{url}}>
+        {% if title == 'eur payment' %}
+        <p>Total payable:  {{ data['amount'] }} EUR</p>
+        {%else%}
+        <p>Total payable:  {{ data['ac_amount'] }} RUB</p>
+        {%endif%}
+        {% for name, value in data.items() %}
+        <input type = "hidden" name = {{name}} value = {{value}}></input>
+        {% endfor %}
+        <button class="button1" type="submit">Go to the payment page </button>
+</form>
+</div>
+{% endblock %}
+</body>
+</html>

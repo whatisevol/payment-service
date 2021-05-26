@@ -1,4 +1,5 @@
 # payment-service
+Go ahead and try it —> https://shielded-eyrie-04765.herokuapp.com/
 ### The service consists of one page with the following elements:
 * The amount of payment (input field of the sum);
 * Payment currency (drop-down list with values ​​of EUR, USD, RUB);
